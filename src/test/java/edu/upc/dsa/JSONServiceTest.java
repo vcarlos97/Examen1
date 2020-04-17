@@ -9,17 +9,32 @@ import static org.junit.Assert.*;
  */
 public class JSONServiceTest {
     @Test
-    public void getTrack() throws Exception {
+    public void getBrote() throws Exception {
 
     }
 
     @Test
-    public void getTrackInJSON() throws Exception {
+    public void getBroteInJSON() throws Exception {
 
     }
 
     @Test
-    public void createTrackInJSON() throws Exception {
+    public void createBroteInJSON() throws Exception {
+
+    }
+
+    @Test
+    public void getCasos() throws Exception {
+
+    }
+
+    @Test
+    public void getCasosInJSON() throws Exception {
+
+    }
+
+    @Test
+    public void createCasosInJSON() throws Exception {
 
     }
 
