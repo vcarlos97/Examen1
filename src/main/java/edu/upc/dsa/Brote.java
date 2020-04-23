@@ -7,10 +7,11 @@ public class Brote {
      public String id;
      public List<Casos> casos = null;
 
-    public Brote() {
+    public Brote(String id, List<Casos> casos) {
     }
     public Brote(String id) {
         this.id = id;
+        this.casos=new LinkedList<>();
 
     }
 
@@ -30,8 +31,25 @@ public class Brote {
         this.casos = casos;
     }
 
+    public int sizeCasos(){
+        return this.casos.size();
+    }
+
+    public int añadirunCaso(Casos caso){
+        try{
+            this.casos.add(caso);
+        }
+        catch (ExceptionInInitializerError e){
+            return 400;
+        }
+        catch (IndexOutOfBoundsException e){
+            return 507;
+        }
+        return 201;
+    }
+
     @Override
     public String toString() {
-        return "Casos [id="+ id +", casos=" + casos + "]";
+        return "Brote [id="+ this.getId() +"]";
     }
 }

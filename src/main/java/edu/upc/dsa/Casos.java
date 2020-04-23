@@ -7,7 +7,7 @@ public class Casos {
     public String nacimiento;
     public String informe;
     public String riesgo;
-    public String  genero;
+    public String genero;
     public String correo;
     public String telefono;
     public String direccion;
@@ -16,7 +16,9 @@ public class Casos {
     public Casos () {
     }
 
-    public Casos (String nombre, String apellido, String idCaso, String nacimiento, String informe, String riesgo, String genero, String correo, String telefono, String direccion, String clasificacion) {
+    public Casos (String nombre, String apellido, String idCaso, String nacimiento, String informe,
+                  String riesgo, String genero, String correo, String telefono, String direccion,
+                  String clasificacion) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.idCaso = idCaso;
@@ -121,7 +123,10 @@ public class Casos {
 
     @Override
     public String toString() {
-        return "Video [nombre="+ nombre+ ", apellido=" + apellido + ", idCaso=" + idCaso +", fecha_nacimiento=" + nacimiento +", fecha_informe=" + informe +", nivel_riesgo=" + riesgo+ ", genero=" + genero +", correo=" + correo +", telefono=" + telefono +", direccion=" + direccion +", clasificacion=" + clasificacion +"] ";
+        return "Caso [nombre="+ nombre+ ", apellido=" + apellido + ", idCaso=" + idCaso +"," +
+                " fecha_nacimiento=" + nacimiento +", fecha_informe=" + informe +", nivel_riesgo=" + riesgo+ "," +
+                " genero=" + genero +", correo=" + correo +", telefono=" + telefono +"," +
+                " direccion=" + direccion +", clasificacion=" + clasificacion +"] ";
     }
 }
 

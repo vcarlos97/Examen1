@@ -1,46 +1,51 @@
 package edu.upc.dsa;
-
+import edu.upc.dsa.Brote;
+import edu.upc.dsa.Casos;
 import org.apache.log4j.Logger;
-
 import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
 
-public class Covid19ManagerImpl implements Covid19Manager{
+public class Covid19ManagerImpl implements Covid19Manager {
     private static Covid19Manager instance;
     private HashMap<String, Brote> hash;
     private List<Casos> listacasos;
     final static Logger logger = Logger.getLogger(Covid19ManagerImpl.class);
 
-    private Covid19ManagerImpl(){
+    private Covid19ManagerImpl() {
         this.hash = new HashMap<>();
         this.listacasos = new LinkedList<>();
     }
 
-    public static Covid19Manager getInstance(){
-        if (instance == null){
+    public static Covid19Manager getInstance() {
+        if (instance == null) {
             instance = new Covid19ManagerImpl();
         }
         return instance;
     }
 
     @Override
-    public int añadirBrote(String id) {
-        Brote b = new Brote(id);
+    public int añadirBrote(String id, List<Casos> casos) {
+        Brote brote = new Brote(id);
         try {
-            hash.put(id, b);
-            logger.info("Brote añadido:" + b);
-            return 201; //OK
-        }
-        catch (IndexOutOfBoundsException e){
-            logger.error("Error en hash");
-            return 507;//No hay storage
+            hash.put(id, new Brote(id,casos));
+            logger.info("El brote se ha añadido" + brote);
+            return 201;//CREADO
         }
         catch (IllegalAccessError e){
-            logger.error("Incorrecto");
-            return 400;//Bad Request
+            logger.error("Formato incorrecto");
+            return 400;
+        }
+        catch (IndexOutOfBoundsException e){
+            logger.error("UserMap Error");
+            return 507;
         }
     }
+
+   /* @Override
+    public int añadirBrote(Brote brote) {
+        return 0;
+    }*/
 
     @Override
     public List<Brote> listabrtote() {
@@ -53,31 +58,51 @@ public class Covid19ManagerImpl implements Covid19Manager{
     }
 
     @Override
-    public int addBrote(String id, Casos casos) {
-        return 0;
-
+    public int addCasoBrote(String id, Casos casos) {
+        Brote b = hash.get(id);
+        if (b != null){
+            int res = b.añadirunCaso(casos);
+            if (res == 201){
+                logger.info("Añadido!" + casos.getNombre());
+                return 201;
+            }
+            else {
+                logger.error("No se ha podido añadir");
+                return 400;
+            }
+        }
+        else{
+            logger.error("Not found");
+            return  404;
+        }
     }
 
     @Override
     public List<Casos> getlistaCasosBrote(Brote brote) {
-        if(this.hash != null){
-            List<Brote> r = new LinkedList<>(hash.values());
-
-        }
-        return r;
-    }
-
-    @Override
-    public int sizeCaso() {
-        int ret = this.hash.size();
-        logger.info("size " + ret);
-        return ret;
+       for (Brote b : this.hash.values()){
+           if(hash.get(b.getId()).equals(brote.getId()))
+               return brote.getCasos();
+       }
+       return null;
     }
 
     @Override
     public int sizeBrote() {
-        int ret = this.hash.size();
-        logger.info("size " + ret);
-        return ret;
+        return hash.size();
     }
+
+    @Override
+    public Brote brote(String id) {
+        return hash.get(id);
+    }
+
+
+    @Override
+    public void recursosoff() {
+        this.listacasos.clear();
+        this.hash.clear();
+
+    }
+
 }
+
