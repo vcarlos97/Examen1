@@ -78,12 +78,16 @@ public class Covid19ManagerImpl implements Covid19Manager {
     }
 
     @Override
-    public List<Casos> getlistaCasosBrote(Brote brote) {
-       for (Brote b : this.hash.values()){
-           if(hash.get(b.getId()).equals(brote.getId()))
-               return brote.getCasos();
-       }
-       return null;
+    public List<Casos> getlistaCasosBrote(String id) {
+        List<Casos> clasificado = new LinkedList<>();
+        Brote brote = brote(id);
+        int n = brote.sizeCasos();
+        if (n == 0)
+            return null;
+        clasificado = brote.getCasos();
+        return  clasificado;
+
+
     }
 
     @Override

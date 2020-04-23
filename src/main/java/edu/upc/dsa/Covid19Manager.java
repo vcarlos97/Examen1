@@ -7,7 +7,7 @@ public interface Covid19Manager {
     //public int añadirBrote(Brote brote);
     List<Brote> listabrtote();
     public int addCasoBrote (String id, Casos casos);
-    List<Casos> getlistaCasosBrote (Brote brote);
+    List<Casos> getlistaCasosBrote (String id);
     public int sizeBrote();
     Brote brote (String id);
     public void recursosoff();

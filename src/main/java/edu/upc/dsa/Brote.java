@@ -10,8 +10,12 @@ public class Brote {
     public Brote(String id, List<Casos> casos) {
     }
     public Brote(String id) {
+
         this.id = id;
         this.casos=new LinkedList<>();
+
+    }
+    public  Brote(){
 
     }
 
