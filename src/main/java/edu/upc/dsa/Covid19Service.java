@@ -107,12 +107,8 @@ public class Covid19Service {
             return Response.status(400).entity(new Brote()).build();
         else{
         }
-
+        return null;
     }
-
-
-
-
 
 
 }

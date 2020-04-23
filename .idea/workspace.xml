@@ -3,9 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="0adde7c5-8007-434c-95ad-37199d51f6b3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/upc/dsa/Brote.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/upc/dsa/Brote.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/upc/dsa/Covid19Manager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/upc/dsa/Covid19Manager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/upc/dsa/Covid19ManagerImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/upc/dsa/Covid19ManagerImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/edu/upc/dsa/Covid19Service.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/upc/dsa/Covid19Service.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -100,14 +97,22 @@
       <option name="project" value="LOCAL" />
       <updated>1587643233803</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Falta Covid19Service AñadirCasoBrote">
+      <created>1587668105752</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1587668105752</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial commit" />
     <MESSAGE value="Commit de las 20:00" />
     <MESSAGE value="Falta Covid19Service" />
-    <option name="LAST_COMMIT_MESSAGE" value="Falta Covid19Service" />
+    <MESSAGE value="Falta Covid19Service AñadirCasoBrote" />
+    <option name="LAST_COMMIT_MESSAGE" value="Falta Covid19Service AñadirCasoBrote" />
   </component>
   <component name="WindowStateProjectService">
     <state x="574" y="96" key="#com.intellij.ide.util.MemberChooser" timestamp="1587640245750">
@@ -130,10 +135,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1587146261389" />
-    <state x="340" y="9" key="CommitChangelistDialog2" timestamp="1587643231101">
+    <state x="370" y="14" key="CommitChangelistDialog2" timestamp="1587668102578">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="340" y="9" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1587643231101" />
+    <state x="370" y="14" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1587668102578" />
     <state width="1493" height="200" key="GridCell.Tab.0.bottom" timestamp="1587148956528">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -158,10 +163,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="249" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1587140888883" />
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1587643235602">
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1587668110823">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1587643235602" />
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1587668110823" />
     <state x="465" y="236" key="com.intellij.ide.util.TipDialog" timestamp="1587634360051">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
